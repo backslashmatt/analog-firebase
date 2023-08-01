@@ -1,0 +1,193 @@
+[debug] [2023-08-01T01:18:31.380Z] ----------------------------------------------------------------------
+[debug] [2023-08-01T01:18:31.382Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mattv\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-08-01T01:18:31.383Z] CLI Version:   12.4.6
+[debug] [2023-08-01T01:18:31.383Z] Platform:      win32
+[debug] [2023-08-01T01:18:31.383Z] Node Version:  v18.17.0
+[debug] [2023-08-01T01:18:31.384Z] Time:          Mon Jul 31 2023 18:18:31 GMT-0700 (Mountain Standard Time)
+[debug] [2023-08-01T01:18:31.384Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-01T01:18:31.518Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-01T01:18:31.519Z] > authorizing via signed-in user (matthew.verry@lyraapps.com)
+[debug] [2023-08-01T01:18:31.723Z] openjdk version "11.0.16" 2022-07-19 LTS
+
+[debug] [2023-08-01T01:18:31.724Z] OpenJDK Runtime Environment Zulu11.58+17-CA (build 11.0.16+8-LTS)
+OpenJDK Client VM Zulu11.58+17-CA (build 11.0.16+8-LTS, mixed mode)
+
+[debug] [2023-08-01T01:18:31.732Z] Parsed Java major version: 11
+[info] i  emulators: Starting emulators: functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting"}}
+[debug] [2023-08-01T01:18:31.749Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-01T01:18:31.749Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-01T01:18:31.749Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-01T01:18:31.749Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-01T01:18:31.749Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-08-01T01:18:31.762Z] [hub] writing locator at C:\Users\mattv\AppData\Local\Temp\hub-dev-app-analog.json
+[debug] [2023-08-01T01:18:31.773Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-01T01:18:31.773Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-01T01:18:31.773Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":8459}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, database, pubsub, storage\u001b[22m"}}
+[debug] [2023-08-01T01:18:31.778Z] defaultcredentials: writing to file C:\Users\mattv\AppData\Roaming\firebase\matthew_verry_lyraapps.com_application_default_credentials.json
+[debug] [2023-08-01T01:18:31.780Z] Setting GAC to C:\Users\mattv\AppData\Roaming\firebase\matthew_verry_lyraapps.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\mattv\\AppData\\Roaming\\firebase\\matthew_verry_lyraapps.com_application_default_credentials.json"}}
+[debug] [2023-08-01T01:18:31.783Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog/adminSdkConfig [none]
+[debug] [2023-08-01T01:18:32.044Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog/adminSdkConfig 200
+[debug] [2023-08-01T01:18:32.044Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog/adminSdkConfig {"projectId":"dev-app-analog","storageBucket":"dev-app-analog.appspot.com"}
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[info] i  firestore: downloading cloud-firestore-emulator-v1.18.1.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.18.1.jar..."}}
+[debug] [2023-08-01T01:18:32.073Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.18.1.jar 
+[debug] [2023-08-01T01:18:32.246Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.18.1.jar 200
+[debug] [2023-08-01T01:18:32.246Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.18.1.jar [stream]
+[debug] [2023-08-01T01:18:42.687Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-01T01:18:42.687Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-08-01T01:18:42.688Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\mattv\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","dev-app-analog","--single_project_mode",true,"--functions_emulator","127.0.0.1:8459"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\mattv\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"dev-app-analog\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:8459\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2023-08-01T01:18:44.792Z] Jul. 31, 2023 6:18:44 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul. 31, 2023 6:18:44 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2023-08-01T01:18:44.829Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2023-08-01T01:18:44.830Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2023-08-01T01:18:45.009Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/dev-app-analog/sites 
+[debug] [2023-08-01T01:18:45.426Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/dev-app-analog/sites 200
+[debug] [2023-08-01T01:18:45.426Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/dev-app-analog/sites {"sites":[{"name":"projects/dev-app-analog/sites/dev-app-analog","defaultUrl":"https://dev-app-analog.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-08-01T01:18:45.426Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog/webApps/-/config [none]
+[debug] [2023-08-01T01:18:46.045Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog/webApps/-/config 200
+[debug] [2023-08-01T01:18:46.045Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog/webApps/-/config {"projectId":"dev-app-analog","appId":"1:95586737736:web:26112393504ddba1aec27d","storageBucket":"dev-app-analog.appspot.com","apiKey":"AIzaSyDgxH0tZzAl6eCoTTCa8pTmxjFxCGEA2cs","authDomain":"dev-app-analog.firebaseapp.com","messagingSenderId":"95586737736","measurementId":"G-2CH96RK9GT"}
+[debug] [2023-08-01T01:18:46.059Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog [none]
+[debug] [2023-08-01T01:18:46.438Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog 200
+[debug] [2023-08-01T01:18:46.439Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dev-app-analog {"projectId":"dev-app-analog","projectNumber":"95586737736","displayName":"dev-app-analog","name":"projects/dev-app-analog","resources":{"hostingSite":"dev-app-analog"},"state":"ACTIVE","etag":"1_c9c8561b-8040-45ac-b9f0-3e02a6570b98"}
+[info] i  hosting[dev-app-analog]: Serving hosting files from: dist/analog/public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/analog/public\u001b[22m"}}
+[info] +  hosting[dev-app-analog]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2023-08-01T01:18:46.471Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-08-01T01:18:46.471Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-08-01T01:18:46.471Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\mattv\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\mattv\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-08-01T01:18:46.622Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-08-01T01:18:46.623Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "D:\SC\analog-firebase\dist\analog\server" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\SC\\analog-firebase\\dist\\analog\\server\" for Cloud Functions..."}}
+[debug] [2023-08-01T01:18:46.749Z] Validating nodejs source
+[debug] [2023-08-01T01:18:47.669Z] > [functions] package.json contents: {
+  "name": "nitro-output",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.mjs",
+  "bundledDependencies": {
+    "@firebase/analytics": "0.10.0",
+    "@firebase/app": "0.9.13",
+    "@firebase/app-check": "0.8.0",
+    "@firebase/app-compat": "0.2.13",
+    "@firebase/auth": "0.23.2",
+    "@firebase/auth-compat": "0.4.2",
+    "@firebase/component": "0.6.4",
+    "@firebase/firestore": "3.13.0",
+    "@firebase/firestore-compat": "0.3.12",
+    "@firebase/installations": "0.6.4",
+    "@firebase/logger": "0.4.0",
+    "@firebase/messaging": "0.12.4",
+    "@firebase/remote-config": "0.4.4",
+    "@firebase/util": "1.9.3",
+    "@firebase/webchannel-wrapper": "0.10.1",
+    "@grpc/grpc-js": "1.7.3",
+    "@grpc/proto-loader": "0.6.13 || 0.7.8",
+    "@protobufjs/aspromise": "1.1.2",
+    "@protobufjs/base64": "1.1.2",
+    "@protobufjs/codegen": "2.0.4",
+    "@protobufjs/eventemitter": "1.1.0",
+    "@protobufjs/fetch": "1.1.0",
+    "@protobufjs/float": "1.0.2",
+    "@protobufjs/inquire": "1.1.0",
+    "@protobufjs/path": "1.1.2",
+    "@protobufjs/pool": "1.1.0",
+    "@protobufjs/utf8": "1.1.0",
+    "buffer-from": "1.1.2",
+    "cookie-es": "1.0.0",
+    "debug": "4.3.4",
+    "defu": "6.1.2",
+    "destr": "2.0.0",
+    "encoding": "0.1.13",
+    "esprima": "4.0.1",
+    "firebase": "9.23.0",
+    "front-matter": "4.0.2",
+    "github-slugger": "2.0.0",
+    "h3": "1.7.1",
+    "has-flag": "3.0.0",
+    "hookable": "5.5.3",
+    "http-graceful-shutdown": "3.1.13",
+    "iconv-lite": "0.6.3",
+    "idb": "7.1.1 || 7.0.1",
+    "iron-webcrypto": "0.7.1",
+    "js-yaml": "3.14.1",
+    "klona": "2.0.6",
+    "lodash.camelcase": "4.3.0",
+    "long": "4.0.0",
+    "marked": "5.1.2",
+    "marked-gfm-heading-id": "3.0.4",
+    "marked-highlight": "2.0.1",
+    "ms": "2.1.2",
+    "node-fetch": "2.6.7",
+    "node-fetch-native": "1.2.0",
+    "ofetch": "1.1.1",
+    "ohash": "1.1.2",
+    "pathe": "1.1.1",
+    "prismjs": "1.29.0",
+    "protobufjs": "6.11.3 || 7.2.4",
+    "radix3": "1.0.1",
+    "safer-buffer": "2.1.2",
+    "scule": "1.0.0",
+    "source-map": "0.6.1",
+    "source-map-support": "0.5.21",
+    "supports-color": "5.5.0",
+    "tr46": "0.0.3",
+    "tslib": "2.6.1",
+    "ufo": "1.2.0",
+    "uncrypto": "0.1.3",
+    "unenv": "1.5.2",
+    "unstorage": "1.8.0",
+    "webidl-conversions": "3.0.1",
+    "whatwg-url": "5.0.0",
+    "xhr2": "0.2.1",
+    "zone.js": "0.13.1"
+  }
+}
+[debug] [2023-08-01T01:18:47.669Z] Building nodejs source
+[debug] [2023-08-01T01:18:47.670Z] Failed to find version of module node: reached end of search path D:\SC\analog-firebase\dist\analog\server\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-08-01T01:18:47.672Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-01T01:18:47.690Z] Found firebase-functions binary at 'D:\SC\analog-firebase\node_modules\.bin\firebase-functions'
+[info] Serving at port 8252
+
+[debug] [2023-08-01T01:18:48.029Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] [nitro]  [uncaughtException] Error: listen EADDRINUSE: address already in use :::8252
+
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:8459 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Firestore │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

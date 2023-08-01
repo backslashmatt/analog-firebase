@@ -1,0 +1,27 @@
+{
+  "functions": {
+    "source": "dist/analog/server",
+    "runtime": "nodejs18"
+  },
+  "hosting": {
+    "public": "dist/analog/public",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [{ "source": "**", "function": "server" }]
+  },
+  "emulators": {
+    "functions": {
+      "port": 8459
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

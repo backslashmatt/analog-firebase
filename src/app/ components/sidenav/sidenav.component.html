@@ -1,0 +1,52 @@
+<mat-toolbar class="mat-primary">
+  <button
+    mat-icon-button
+    aria-label="Navigation menu"
+    (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+  <span class="spacer"></span>
+  <button
+    aria-hidden="false"
+    aria-label="User Profile"
+    mat-icon-button
+    [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button  mat-menu-item (click)="login()" *ngIf="!userSingedIn; else signedIn">
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+    <ng-template #signedIn>
+      <p mat-menu-item class="no-click">
+        <mat-icon>person</mat-icon>{{ userName }}
+      </p>
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Log Out</span>
+      </button>
+    </ng-template>
+  </mat-menu>
+</mat-toolbar>
+<mat-drawer-container class="sidenav-container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let route of routes"
+        class="right-align"
+        role="button"
+        routerLinkActive
+        #rla="routerLinkActive"
+        [activated]="rla.isActive"
+        [routerLink]="route.path">
+        <mat-icon matListItemIcon>{{ route.icon }}</mat-icon>
+        {{ route.title }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <div class="sidenav-content">
+    <ng-content></ng-content>
+  </div>
+</mat-drawer-container>
