@@ -37,8 +37,10 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-*.log
 .cache
+
+# ignore all logs
+*.log
 
 # System files
 .DS_Store
