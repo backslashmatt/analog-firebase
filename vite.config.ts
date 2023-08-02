@@ -14,6 +14,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      nitro: {
+        preset: 'firebase',
+      },
       vite: {
         inlineStylesExtension: 'scss',
       },

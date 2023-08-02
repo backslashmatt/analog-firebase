@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {SidenavComponent} from "./ components/sidenav/sidenav.component";
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { AsyncPipe } from '@angular/common';
+import { HelloService } from './services/hello.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SidenavComponent],
-  template: `<app-sidenav>
-    <router-outlet></router-outlet>
-  </app-sidenav>`,
+  providers: [HelloService],
+  imports: [RouterOutlet, SidenavComponent, AsyncPipe],
+  template: `
+    <app-sidenav
+      [userName]="helloService.getHello() | async"
+      [userSignedIn]="true">
+      <router-outlet></router-outlet>
+    </app-sidenav>
+  `,
   styles: [
     `
       :host {
@@ -18,4 +25,6 @@ import {SidenavComponent} from "./ components/sidenav/sidenav.component";
     `,
   ],
 })
-export class AppComponent {}
+export class AppComponent {
+  helloService = inject(HelloService);
+}

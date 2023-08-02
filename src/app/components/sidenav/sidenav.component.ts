@@ -1,13 +1,12 @@
-import {Component, inject, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatButtonModule} from "@angular/material/button";
-import {RouterLink, RouterLinkActive, RouterModule} from "@angular/router";
-import {AuthService} from "../../services/auth.service";
+import { MatButtonModule } from '@angular/material/button';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 export interface RouteLayout {
   path: string;
@@ -27,7 +26,7 @@ export interface RouteLayout {
     MatMenuModule,
     MatButtonModule,
     RouterLinkActive,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './sidenav.component.html',
   styles: [
@@ -65,22 +64,6 @@ export interface RouteLayout {
 export class SidenavComponent {
   @Input() title: string = 'Test App';
   @Input() routes: RouteLayout[] = [];
-
-  private _auth = inject(AuthService);
-
-  public get userName(): string {
-    return this._auth.userData?.displayName ?? '';
-  }
-
-  public get userSingedIn(): boolean {
-    return this._auth.isLoggedIn;
-  }
-
-  public async login(): Promise<void> {
-    await this._auth.GoogleAuth();
-  }
-
-  public async logout(): Promise<void> {
-    await this._auth.SignOut();
-  }
+  @Input() userSignedIn = false;
+  @Input() userName = '';
 }
