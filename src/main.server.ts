@@ -2,6 +2,7 @@ import 'zone.js/node';
 import { enableProdMode } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { renderApplication } from '@angular/platform-server';
+import { initializeApp } from 'firebase-admin/app';
 
 import { config } from './app/app.config.server';
 import { AppComponent } from './app/app.component';
@@ -9,6 +10,8 @@ import { AppComponent } from './app/app.component';
 if (import.meta.env.PROD) {
   enableProdMode();
 }
+
+initializeApp();
 
 export function bootstrap() {
   return bootstrapApplication(AppComponent, config);

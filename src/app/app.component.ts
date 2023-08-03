@@ -10,9 +10,7 @@ import { HelloService } from './services/hello.service';
   providers: [HelloService],
   imports: [RouterOutlet, SidenavComponent, AsyncPipe],
   template: `
-    <app-sidenav
-      [userName]="helloService.getHello() | async"
-      [userSignedIn]="true">
+    <app-sidenav userName="Test" [userSignedIn]="false">
       <router-outlet></router-outlet>
     </app-sidenav>
   `,

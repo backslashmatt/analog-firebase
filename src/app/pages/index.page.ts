@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
-import { SidenavComponent } from '../components/sidenav/sidenav.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   template: `
-    >
     <div>
       <a href="https://analogjs.org/" target="_blank">
         <img alt="Analog Logo" class="logo analog" src="/analog.svg" />
@@ -45,7 +42,6 @@ import { SidenavComponent } from '../components/sidenav/sidenav.component';
       }
     `,
   ],
-  imports: [AsyncPipe, SidenavComponent],
 })
 export default class HomeComponent {
   count = 0;

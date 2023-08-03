@@ -17,7 +17,7 @@
   <mat-menu #menu="matMenu">
     <button  mat-menu-item *ngIf="!userSignedIn; else signedIn">
       <mat-icon>login</mat-icon>
-      <span>Login</span>
+      <span [routerLink]="['/auth/login']">Login</span>
     </button>
     <ng-template #signedIn>
       <p mat-menu-item class="no-click">

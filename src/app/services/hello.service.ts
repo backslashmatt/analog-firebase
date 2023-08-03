@@ -6,7 +6,5 @@ import { of } from 'rxjs';
 export class HelloService {
   httpClient = inject(HttpClient);
 
-  public getHello() {
-    return of('Test');
-  }
+  public getHello() {}
 }
